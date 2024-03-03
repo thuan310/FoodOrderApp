@@ -1,29 +1,16 @@
-import { StyleSheet , Text, View } from 'react-native';
+import { View } from 'react-native';
 
-import EditScreenInfo from '@/src/components/EditScreenInfo';
-import Colors from '@/src/constants/Colors';
+import products from '@/assets/data/products';
+import ProductionListItem from '@/src/components/ProductListItem';
 
 
-export default function TabOneScreen() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Pizza Peperoni</Text>
-      <Text style={styles.price}>$12.99</Text>
+export default function MenuScreen() {
+return (
+    <View>
+      <ProductionListItem product ={products[5]}/>
+      <ProductionListItem product ={products[7]}/>
+      
     </View>
   );
-}
+} 
 
-const styles = StyleSheet.create({
-  container: {
-    
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginVertical: 10,
-  },
-  price: {
-    color: Colors.light.tint,
-    fontWeight: 'bold',
-  }
-});
